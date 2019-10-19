@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import sample.*?>
+
+<?import sample.MaskField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1011.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerAddClient">
+   <children>
+      <Label fx:id="stateSurname" layoutX="68.0" layoutY="34.0" prefHeight="27.0" prefWidth="100.0" text="Фамилия" />
+      <Label fx:id="stateName" layoutX="375.0" layoutY="34.0" prefHeight="27.0" prefWidth="100.0" text="Имя" />
+      <Label fx:id="statePatronymic" layoutX="679.0" layoutY="34.0" prefHeight="27.0" prefWidth="100.0" text="Отчество" />
+      <Label fx:id="stateBirthday" layoutX="56.0" layoutY="107.0" prefHeight="27.0" prefWidth="135.0" text="Дата рождения" />
+      <Label fx:id="stateGender" layoutX="363.0" layoutY="107.0" prefHeight="27.0" prefWidth="100.0" text="Пол" />
+      <NameTextField fx:id="new_surname" layoutX="56.0" layoutY="61.0" />
+      <NameTextField fx:id="new_name" layoutX="363.0" layoutY="61.0" />
+      <NameTextField fx:id="new_patronymic" layoutX="667.0" layoutY="61.0" />
+      <MaskField fx:id="new_seria_passport" layoutX="56.0" layoutY="227.0" prefHeight="39.0" prefWidth="71.0" mask="AA"></MaskField>
+      <Group>
+         <children>
+            <RadioButton fx:id="woman_gender" layoutX="504.0" layoutY="150.0" mnemonicParsing="false" text="Женский" />
+            <RadioButton fx:id="man_gender" layoutX="359.0" layoutY="150.0" mnemonicParsing="false" text="Мужской" />
+         </children>
+      </Group>
+      <Label fx:id="stateSeria" layoutX="56.0" layoutY="196.0" prefHeight="27.0" prefWidth="71.0" text="Серия " />
+      <Label fx:id="stateNumber" layoutX="150.0" layoutY="196.0" prefHeight="27.0" prefWidth="135.0" text="№ паспорта" />
+      <MaskField fx:id="new_number_passport" layoutX="150.0" layoutY="227.0" prefHeight="39.0" prefWidth="145.0" mask="DDDDDDD"/>
+      <Label fx:id="stateWho" layoutX="323.0" layoutY="196.0" prefHeight="27.0" prefWidth="135.0" text="Кем выдан" />
+      <TextField fx:id="new_who_issue" layoutX="323.0" layoutY="227.0" />
+      <Label fx:id="stateDate" layoutX="570.0" layoutY="196.0" prefHeight="27.0" prefWidth="135.0" text="Дата выдачи" />
+      <TextField fx:id="new_identification_number" layoutX="732.0" layoutY="228.0" prefHeight="39.0" prefWidth="243.0" />
+      <Label fx:id="stateId" layoutX="732.0" layoutY="197.0" prefHeight="27.0" prefWidth="243.0" text="Идентификационный номер" />
+      <Label fx:id="stateNowAddress" layoutX="516.0" layoutY="274.0" prefHeight="27.0" prefWidth="224.0" text="Адрес факт. проживания" />
+      <TextField fx:id="new_now_address" layoutX="516.0" layoutY="305.0" prefHeight="39.0" prefWidth="230.0" />
+      <Label fx:id="stateNowCity" layoutX="251.0" layoutY="274.0" prefHeight="27.0" prefWidth="214.0" text="Город факт.проживания" />
+      <Label fx:id="stateBirthPlace" layoutX="56.0" layoutY="274.0" prefHeight="27.0" prefWidth="145.0" text="Место рождения" />
+      <TextField fx:id="new_birth_place" layoutX="56.0" layoutY="305.0" prefHeight="39.0" prefWidth="145.0" />
+      <TextField fx:id="new_mail" layoutX="653.0" layoutY="377.0" />
+      <MaskField fx:id="new_home_phone" layoutX="346.0" layoutY="377.0" mask="80(DD)-DDD-DD-DD" />
+      <MaskField fx:id="new_mob_phone" layoutX="56.0" layoutY="377.0" mask="+375(DD)DDD-DDDD" />
+      <Label layoutX="653.0" layoutY="350.0" prefHeight="27.0" prefWidth="100.0" text="E-mail" />
+      <Label layoutX="349.0" layoutY="350.0" prefHeight="27.0" prefWidth="129.0" text="Телефон дом." />
+      <Label layoutX="56.0" layoutY="350.0" prefHeight="27.0" prefWidth="117.0" text="Телефон моб." />
+      <Label fx:id="stateBirthCity" layoutX="53.0" layoutY="432.0" prefHeight="27.0" prefWidth="145.0" text="Город прописки" />
+      <Label fx:id="stateMarried" layoutX="346.0" layoutY="432.0" prefHeight="27.0" prefWidth="200.0" text="Семейное положение" />
+      <Label fx:id="stateNationality" layoutX="650.0" layoutY="432.0" prefHeight="27.0" prefWidth="173.0" text="Гражданство" />
+      <Label fx:id="stateDisability" layoutX="53.0" layoutY="508.0" prefHeight="27.0" prefWidth="145.0" text="Инвалидность" />
+      <Label layoutX="349.0" layoutY="541.0" prefHeight="27.0" prefWidth="129.0" text="Пенсионер" />
+      <Label layoutX="650.0" layoutY="508.0" prefHeight="27.0" prefWidth="183.0" text="Ежемесячный доход" />
+      <NumberTextField fx:id="new_money" layoutX="650.0" layoutY="535.0" />
+      <CheckBox fx:id="new_pensioner" layoutX="473.0" layoutY="541.0" mnemonicParsing="false" />
+      <Button fx:id="addClient" layoutX="766.0" layoutY="602.0" mnemonicParsing="false" onAction="#addClient" text="Добавить клиента" />
+      <Label layoutX="402.0" layoutY="2.0" text="Данные клиента">
+         <font>
+            <Font name="Baskerville Old Face" size="26.0" />
+         </font>
+      </Label>
+      <Button layoutX="52.0" layoutY="602.0" mnemonicParsing="false" onAction="#PrevButtonPushed" text="Назад" />
+      <ChoiceBox fx:id="new_now_city" layoutX="254.0" layoutY="305.0" prefHeight="39.0" prefWidth="208.0" />
+      <ChoiceBox fx:id="new_married" layoutX="342.0" layoutY="459.0" prefHeight="39.0" prefWidth="208.0" />
+      <ChoiceBox fx:id="new_nationality" layoutX="649.0" layoutY="459.0" prefHeight="39.0" prefWidth="208.0" />
+      <ChoiceBox fx:id="new_birth_city" layoutX="53.0" layoutY="459.0" prefHeight="39.0" prefWidth="208.0" />
+      <ChoiceBox fx:id="new_disability" layoutX="53.0" layoutY="535.0" prefHeight="39.0" prefWidth="208.0" />
+      <DatePicker fx:id="new_date_issue" layoutX="565.0" layoutY="228.0" prefHeight="32.0" prefWidth="145.0" />
+      <DatePicker fx:id="new_birthday" layoutX="52.0" layoutY="144.0" prefHeight="32.0" prefWidth="224.0" />
+   </children>
+</AnchorPane>

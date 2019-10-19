@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button layoutX="67.0" layoutY="512.0" mnemonicParsing="false" onAction="#newClientButtonPushed" text="Добавить" />
+        <Button layoutX="868.0" layoutY="512.0" mnemonicParsing="false" onAction="#EndButtonPushed" text="Выход" />
+        <Button fx:id="deleteButton" layoutX="730.0" layoutY="512.0" mnemonicParsing="false" text="Удалить" />
+        <TableView fx:id="clientTable" layoutY="-2.0" prefHeight="500.0" prefWidth="1000.0">
+            <columns>
+                <TableColumn fx:id="surname" onEditCommit="#onEditChangesSurname" prefWidth="101.0" text="Фамилия" />
+                <TableColumn fx:id="name" minWidth="0.0" onEditCommit="#onEditChangesName" prefWidth="81.0" text="Имя" />
+                <TableColumn fx:id="patronymic" minWidth="0.0" onEditCommit="#onEditChangesPatronymic" prefWidth="101.0" text="Отчество" />
+                <TableColumn fx:id="birthday" onEditCommit="#onEditChangesBirthday" prefWidth="112.0" text="Дата рождения" />
+                <TableColumn fx:id="gender" onEditCommit="#onEditChangesGender" prefWidth="68.0" text="Пол" />
+                <TableColumn fx:id="seria_passport" onEditCommit="#onEditChangesSeriaPassport" prefWidth="62.0" text="Серия" />
+                <TableColumn fx:id="number_passport" onEditCommit="#onEditChangesNumberPassport" prefWidth="118.0" text="№ паспорта" />
+                <TableColumn fx:id="who_issue" onEditCommit="#onEditChangesWhoIssue" prefWidth="144.0" text="Кем выдан" />
+                <TableColumn fx:id="date_issue" onEditCommit="#onEditChangesDateIssue" prefWidth="145.0" text="Дата выдачи" />
+                <TableColumn fx:id="identification_number" onEditCommit="#onEditChangesID" prefWidth="200.0" text="Идент. номер" />
+                <TableColumn fx:id="birth_place" onEditCommit="#onEditChangesBirthPlace" prefWidth="167.0" text="Место рождения" />
+                <TableColumn fx:id="now_city" onEditCommit="#onEditChangesNowCity" prefWidth="194.0" text="Город факт. проживания" />
+                <TableColumn fx:id="now_address" onEditCommit="#onEditChangesNowAddress" prefWidth="269.0" text="Адрес факт. проживания" />
+                <TableColumn fx:id="mob_phone" onEditCommit="#onEditChangesMobPhone" prefWidth="171.0" text="Телефон моб." />
+                <TableColumn fx:id="home_phone" onEditCommit="#onEditChangesHomePhone" prefWidth="155.0" text="Телефон дом." />
+                <TableColumn fx:id="mail" onEditCommit="#onEditChangesMail" prefWidth="131.0" text="E-mail" />
+                <TableColumn fx:id="birth_city" onEditCommit="#onEditChangesBirthCity" prefWidth="159.0" text="Город прописки" />
+                <TableColumn fx:id="married" onEditCommit="#onEditChangesMarried" prefWidth="64.0" text="СП" />
+                <TableColumn fx:id="nationality" onEditCommit="#onEditChangesNationality" prefWidth="134.0" text="Гражданство" />
+                <TableColumn fx:id="disability" onEditCommit="#onEditChangesDisability" prefWidth="149.0" text="Инвалидность" />
+                <TableColumn fx:id="pensioner" onEditCommit="#onEditChangesPensioner" prefWidth="112.0" text="Пенсионер" />
+                <TableColumn fx:id="money" onEditCommit="#onEditChangesMoney" prefWidth="162.0" text="Ежемесячный доход" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
